@@ -39,7 +39,17 @@ class Sitio extends Controller
 
     public function infoTour($tour = '')
     {
-    	return view('infoTour');
+
+        $tourInfo = Tour::all()->where('url', '=',$tour);
+        $numTour = count($tourInfo);
+       if($numTour==0)
+       {
+        return abort(404);
+       }
+       else
+       {
+        return view('infoTour',compact('tourInfo'));
+       }
     }
 
     public function contactanos()

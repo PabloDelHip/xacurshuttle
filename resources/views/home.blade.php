@@ -56,7 +56,7 @@
 							<article class=" col-md-12 mt-5">
 								<h2 class="titulo">{{ $categorie->name }}</h2>
 								<div class="contenido text-justify">
-									{{ $categorie->description }}
+                                    {!! $categorie->description !!}
 								</div>
 							</article>
                         </div>
