@@ -1,7 +1,7 @@
 
 header
 {
-	background-color: #494949;
+	background-color: #C2185B;
 
 }
 
@@ -36,15 +36,16 @@ div.carrito
 
 	span a
 	{
-		font-size: 1.1em;
-		color: $colorRojo;
+		font-size: 1.3em;
+
 	}
 }
 
 div.nice-select
 {
 	font-family: 'Quicksand', sans-serif !important;
-	padding-left: 0px !important;
+    padding-left: 0px !important;
+    background-color: #C2185B !important;
 }
 div.box
 {
@@ -67,7 +68,7 @@ div.menu ul
 }
 
 div.menu ul li:hover > a{
-	color: $colorRojo !important;
+	color: $colorRosadoLogo !important;
 }
 
 .sub-menu
@@ -243,7 +244,7 @@ div.footer > div.row
 
 .iconos-footer a:hover
 {
-	background-color: $colorAzulMarino;
+	background-color: $colorRosadoLogo;
 }
 
 ul.lista-footer a
@@ -292,8 +293,9 @@ p.copy
 
 .titulo-promociones
 {
-	background-color: $colorVerde;
-	font-family: 'Raleway', sans-serif !important;
+	background-color: $colorNaranja;
+    font-family: 'Raleway', sans-serif !important;
+    color: #fff;
 }
 
 .contenido-promociones
@@ -394,4 +396,37 @@ div.tours-relacionados
 {
     background-color: #fff;
     width: 100%;
+}
+
+.tituloGuardarReserva
+{
+    background-color: $colorRosadoLogo;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.4em;
+    color: #fff;
+}
+
+.tituloInfoParticipantes
+{
+    color: $colorNaranja;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+	font-size: 1.2em;
+}
+
+.ui-datepicker-header
+{
+    background-color: $colorRosadoLogo !important ;
+}
+
+.ui-datepicker-month,
+.ui-datepicker-year
+{
+    color: #fff !important;
+}
+
+.ui-datepicker-unselectable span.ui-state-default
+{
+    text-decoration:line-through !important;
 }

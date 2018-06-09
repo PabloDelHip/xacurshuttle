@@ -1,27 +1,23 @@
 @extends('layout')
 
 @section('contenido')
-
 @include('includes.migajas', array('miVar' => 'Tours > Cancún'))
 <div class="container">
 		<div class="row mt-2">
 			<div class="col-9 p-0 m-0">
-				<h1 class="titulo pb-1 mb-2 mt-2">Xcaret Basico</h1>
+				<h1 class="titulo pb-1 mb-2 mt-2">
+                    @foreach($tourInfo as $tour)
+                        {!! $tour->name !!}
+                    @endforeach</h1>
 				<div class="col-12">
 					<div class="carousel slide" id="principal-carousel" data-ride="carousel">
 
 						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<img src="{{ url('/img/carousel1.jpg') }}" alt="">
-							</div>
-
-							<div class="carousel-item">
-								<img src="{{ url('/img/carousel1.jpg') }}" alt="">
-							</div>
-
-							<div class="carousel-item">
-								<img src="{{ url('/img/carousel1.jpg') }}" alt="">
-							</div>
+                            @foreach($image->imagetour as $key => $img)
+                                <div  class="carousel-item @if($key==0) active @endif" >
+                                    <img src="{{ url('/img/tours')}}/{{ $img->image }}" alt="">
+                                </div>
+                            @endforeach
 						</div>
 
 						<a href="#principal-carousel" class="carousel-control-prev" data-slide="prev">
@@ -36,9 +32,9 @@
 					</div>
 				</div>{{-- FINAL CAROUSEL --}}
 
-				<div class="col-12">
+				{{-- <div class="col-12">
 					<a href="#" class="btn btn-danger btn-sm mt-2">INFORMACION Y COTIZACION AQUI</a>
-				</div>
+				</div> --}}
 
 				<div class="col-12 mt-2 pt-2" >
 					<ul class="nav nav-tabs" id="myTab" role="tablist" style="background-color: #fff;">
@@ -79,7 +75,7 @@
 					</div>
 				</div> {{-- FINAL NAV-TAPS --}}
 
-				<div class="col-12 mt-3 p" style="background-color: #fff;">
+				{{-- <div class="col-12 mt-3 p" style="background-color: #fff;">
 					<div class="row tours-relacionados">
                         <div class="col-12">
                             <p class="h4 m-2">Tours relacionados</p>
@@ -121,9 +117,8 @@
                             <a href="#" class="btn btn-primary btn-sm">Ver todos los tours</a>
                         </div>
 					</div>
-				</div>
+				</div> --}}
 			</div>
-
 			@include('includes.aside')
 
 			{{-- <div class="col-3">

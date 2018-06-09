@@ -10712,7 +10712,7 @@ pre[class*="language-"] {
 }
 
 header {
-  background-color: #494949;
+  background-color: #C2185B;
 }
 
 div.contenedor-menu {
@@ -10738,13 +10738,13 @@ div.carrito {
 }
 
 div.carrito span a {
-  font-size: 1.1em;
-  color: #fa4a4a;
+  font-size: 1.3em;
 }
 
 div.nice-select {
   font-family: 'Quicksand', sans-serif !important;
   padding-left: 0px !important;
+  background-color: #C2185B !important;
 }
 
 div.box {
@@ -10763,7 +10763,7 @@ div.menu ul li a {
 }
 
 div.menu ul li:hover > a {
-  color: #fa4a4a !important;
+  color: #EA3E7F !important;
 }
 
 .sub-menu {
@@ -10791,11 +10791,11 @@ div#wowslider-container1 {
 }
 
 .titulo {
-  color: #fca418 !important;
+  color: #00587B !important;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 1.4em;
-  border-bottom: solid 1px #fca418;
+  border-bottom: solid 1px #00587B;
   text-transform: uppercase;
   display: inline-block;
 }
@@ -10912,7 +10912,7 @@ div.footer > div.row {
 }
 
 .iconos-footer a:hover {
-  background-color: #06749f;
+  background-color: #EA3E7F;
 }
 
 ul.lista-footer a {
@@ -10948,14 +10948,15 @@ p.copy {
 }
 
 .tituloBuscar {
-  background-color: #fca418;
+  background-color: #00587B;
   font-family: 'Raleway', sans-serif !important;
   color: #fff;
 }
 
 .titulo-promociones {
-  background-color: #79c471;
+  background-color: #00587B;
   font-family: 'Raleway', sans-serif !important;
+  color: #fff;
 }
 
 .contenido-promociones {
@@ -10986,7 +10987,7 @@ p.copy {
 }
 
 .alojamiento div:first-child {
-  background-color: #fca418;
+  background-color: #00587B;
 }
 
 .alojamiento div:last-child {
@@ -11005,7 +11006,7 @@ div.linea-pagina p {
 }
 
 div.tours-relacionados div:first-child p {
-  color: #fca418;
+  color: #00587B;
 }
 
 div.tours-relacionados div a {
@@ -11027,5 +11028,33 @@ div.tours-relacionados div a {
 .select-formulario {
   background-color: #fff;
   width: 100%;
+}
+
+.tituloGuardarReserva {
+  background-color: #EA3E7F;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.4em;
+  color: #fff;
+}
+
+.tituloInfoParticipantes {
+  color: #00587B;
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2em;
+}
+
+.ui-datepicker-header {
+  background-color: #EA3E7F !important;
+}
+
+.ui-datepicker-month,
+.ui-datepicker-year {
+  color: #fff !important;
+}
+
+.ui-datepicker-unselectable span.ui-state-default {
+  text-decoration: line-through !important;
 }
 

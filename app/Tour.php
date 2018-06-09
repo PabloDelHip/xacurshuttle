@@ -12,4 +12,9 @@ class Tour extends Model
 
     }
 
+    public function imagetour()
+    {
+        return $this->hasMany(Imagetour::class);
+    }
+
 }

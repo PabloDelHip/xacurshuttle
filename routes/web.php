@@ -14,9 +14,7 @@
 
 Route::get('/', ['as' => '/', 'uses' => 'Sitio@home']);
 Route::get('contactanos', ['as' => 'contactanos', 'uses' => 'Sitio@contactanos']);
-// Route::get('{ubicacion?}/tours-aventuras', ['as' => 'cancun/tours-aventuras', 'uses' => 'Sitio@cancun']);
-
-
 Route::get('{ubicacion?}/tours-aventuras', ['as' => '{ubicacion?}/tours-aventuras', 'uses' => 'Sitio@ubicacion'])->where('ubicacion', "[A-Za-z]+");
-
 Route::get('{tour?}/informacion', ['as' => '{tour?}/informacion', 'uses' => 'Sitio@infoTour']);
+Route::post('ingresar-carrito', ['as' => 'ingresar-carrito' , 'uses' => 'Sitio@insertCard']);
+

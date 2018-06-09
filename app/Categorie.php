@@ -11,13 +11,4 @@ class Categorie extends Model
         return $this->belongsToMany(Tour::class);
     }
 
-    public function toursHome($num)
-    {
-        // if($this->role->name===$role)
-        // {
-
-        // }
-        dd($this->tours());
-        echo "Hola soy la riataaaaaaa";
-    }
 }

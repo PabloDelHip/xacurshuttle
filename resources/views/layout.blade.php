@@ -2,20 +2,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="{{ url('/img/logo.ico') }}" />
 	<title>Tours y actividades en Cancun y la Riviera Maya</title>
 	<link rel="stylesheet" href="{{ url('/css/app.css') }}">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 	<link rel="stylesheet" type="text/css" href="{{ url('/engine1/style.css') }}" />
     <script type="text/javascript" src="{{ url('/engine1/jquery.js') }}"></script>
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
-<body style="background-image: url('{{ url('/img/textura.png') }}');">
-
+<body  style="background-image: url('{{ url('/img/textura.png') }}');">
 
 	<header class="col-12">
 		<div class="container datos-contacto-header pt-1 pb-1">
@@ -283,6 +285,48 @@
 
     });
   </script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+        $.datepicker.regional['es'] = {
+            closeText: 'Cerrar',
+            prevText: '< Ant',
+            nextText: 'Sig >',
+            currentText: 'Hoy',
+            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+            dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+            dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+            dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+            weekHeader: 'Sm',
+            dateFormat: 'dd/mm/yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''
+            };
+            $.datepicker.setDefaults($.datepicker.regional['es']);
+  $( function() {
+    $( "#datepicker" ).datepicker({ minDate: 2 });
+  } );
+
+    @if($dias_activo_tour!='')
+    /*Bloquear dias especificos de la semana*/
+	           function noExcursion(date){
+    var day = date.getDay();
+    // aqui indicamos el numero correspondiente a los dias que ha de bloquearse (el 0 es Domingo, 1 Lunes, etc...) en el ejemplo bloqueo todos menos los lunes y jueves.
+    return [({!! $dias_activo_tour !!}), ''];
+    };
+
+    //Crear el datepicker
+    $("#datepicker").datepicker({
+    beforeShowDay: noExcursion,
+    });
+    @endif
+  </script>
+
+
 
 </body>
 </html>
