@@ -430,3 +430,102 @@ div.tours-relacionados
 {
     text-decoration:line-through !important;
 }
+
+div.linea-pasos
+{
+    font-family: 'Quicksand', sans-serif;
+    color: $colorGris;
+    div i
+    {
+        font-size: 3em;
+    }
+
+    div p
+    {
+        font-size: 1.3em;
+    }
+}
+
+.paso-activo
+{
+    color: $colorRosadoLogo !important;
+    font-weight: 600;
+}
+
+.info-tour-pasos
+{
+    font-family: 'Quicksand', sans-serif;
+    p
+    {
+        font-size: 1.1em;
+        b
+        {
+            color: $colorRojo;
+        }
+        b+span
+        {
+            font-size: .8em;
+        }
+    }
+    p.h4
+    {
+        font-size: 1.4em;
+        border-bottom: 1px solid #000;
+        display: inline;
+        color: $colorAzulMarino;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+
+div.pasos-total-pagar
+{
+    font-family: 'Quicksand', sans-serif;
+    p b
+    {
+        font-size: 1.6em;
+        color: $colorRojo;
+    }
+
+    a p
+    {
+        margin-top: 50%;
+        font-size: 1.5em;
+        color: $colorRojo;
+    }
+}
+
+div.total-tours
+{
+    font-family: 'Quicksand', sans-serif;
+    color: $colorRojo;
+    font-weight: 500;
+    p
+    {
+
+        font-size: 1.5em;
+        color: $colorAzulMarino;
+        span
+        {
+            color: $colorRojo;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+        span:last-child
+        {
+            color: $colorGris;
+            font-size: .7em;
+        }
+    }
+}
+
+div.formulario-datos-cliente
+{
+    border: solid 1px $colorGris;
+    div p
+    {
+        border-bottom: 1px solid $colorGris;
+    }
+}
+
+

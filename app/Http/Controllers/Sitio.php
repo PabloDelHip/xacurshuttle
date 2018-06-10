@@ -91,16 +91,6 @@ class Sitio extends Controller
 
     }
 
-    public function insertCard(Request $request)
-    {
-        dd($request->all());
-        //Cart::add('293ad1', 'Product 11', 1, 9.99);
-        // Cart::add(['id' => '293ad', 'name' => 'Product 1', 'qty' => 1, 'price' => 9.99, 'options' => ['Tamano' => 'Grande']]);
-        // $rowId = "8cbf215baa3b757e910e5305ab981172";
-        // Cart::update($rowId, ['name' => 'Producto actualizado']);
-
-    }
-
     public function contactanos()
     {
     	return view('contactanos');

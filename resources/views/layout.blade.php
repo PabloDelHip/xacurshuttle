@@ -42,7 +42,7 @@
 
 				<div class="datos-header carrito">
 					<span>
-						<a href="#"><i class="fas fa-shopping-cart"></i> 0</a>
+                    <a href="{{ url('/carrito') }}"><i class="fas fa-shopping-cart"></i> {{Cart::content()->count()}}</a>
 					</span>
 				</div>
 				<div>
@@ -311,18 +311,20 @@
     $( "#datepicker" ).datepicker({ minDate: 2 });
   } );
 
-    @if($dias_activo_tour!='')
-    /*Bloquear dias especificos de la semana*/
+    @if(isset($dias_activo_tour))
+        @if($dias_activo_tour!='')
+        /*Bloquear dias especificos de la semana*/
 	           function noExcursion(date){
-    var day = date.getDay();
-    // aqui indicamos el numero correspondiente a los dias que ha de bloquearse (el 0 es Domingo, 1 Lunes, etc...) en el ejemplo bloqueo todos menos los lunes y jueves.
-    return [({!! $dias_activo_tour !!}), ''];
-    };
+                var day = date.getDay();
+                // aqui indicamos el numero correspondiente a los dias que ha de bloquearse (el 0 es Domingo, 1 Lunes, etc...) en el ejemplo bloqueo todos menos los lunes y jueves.
+                return [({!! $dias_activo_tour !!}), ''];
+                };
 
-    //Crear el datepicker
-    $("#datepicker").datepicker({
-    beforeShowDay: noExcursion,
-    });
+                //Crear el datepicker
+                $("#datepicker").datepicker({
+                beforeShowDay: noExcursion,
+            });
+        @endif
     @endif
   </script>
 

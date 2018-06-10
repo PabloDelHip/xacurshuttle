@@ -18,9 +18,9 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="numAdultos" class="col-sm-7 col-form-label m-0">Num Niños <span>(7-11)</span></label>
+                        <label for="numNinos" class="col-sm-7 col-form-label m-0">Num Niños <span>(7-11)</span></label>
                         <div class="col-sm-5 m-0">
-                            <input name="num_ninos" type="number" class="form-control" id="numAdultos" value="1" min="1" max="160">
+                            <input name="num_ninos" type="number" class="form-control" id="numNinos" value="1" min="0" max="160">
 
                         </div>
                     </div>
@@ -29,6 +29,9 @@
                         <label for="FechaTour">Fecha:</label>
                         <input name="fecha_tour"  type="text" class="form-control" id="datepicker" required>
                     </div>
+                    @foreach($tourInfo as $tour)
+                        <input type="hidden" name="id" value="{{ $tour->id }}">
+                    @endforeach</h1>
                     <button type="submit" class="btn btn-danger">Reservar</button>
                 </form>
             </div>

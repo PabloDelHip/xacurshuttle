@@ -11058,3 +11058,91 @@ div.tours-relacionados div a {
   text-decoration: line-through !important;
 }
 
+div.linea-pasos {
+  font-family: 'Quicksand', sans-serif;
+  color: #b3b2b2;
+}
+
+div.linea-pasos div i {
+  font-size: 3em;
+}
+
+div.linea-pasos div p {
+  font-size: 1.3em;
+}
+
+.paso-activo {
+  color: #EA3E7F !important;
+  font-weight: 600;
+}
+
+.info-tour-pasos {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.info-tour-pasos p {
+  font-size: 1.1em;
+}
+
+.info-tour-pasos p b {
+  color: #fa4a4a;
+}
+
+.info-tour-pasos p b + span {
+  font-size: .8em;
+}
+
+.info-tour-pasos p.h4 {
+  font-size: 1.4em;
+  border-bottom: 1px solid #000;
+  display: inline;
+  color: #06749f;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+div.pasos-total-pagar {
+  font-family: 'Quicksand', sans-serif;
+}
+
+div.pasos-total-pagar p b {
+  font-size: 1.6em;
+  color: #fa4a4a;
+}
+
+div.pasos-total-pagar a p {
+  margin-top: 50%;
+  font-size: 1.5em;
+  color: #fa4a4a;
+}
+
+div.total-tours {
+  font-family: 'Quicksand', sans-serif;
+  color: #fa4a4a;
+  font-weight: 500;
+}
+
+div.total-tours p {
+  font-size: 1.5em;
+  color: #06749f;
+}
+
+div.total-tours p span {
+  color: #fa4a4a;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+div.total-tours p span:last-child {
+  color: #b3b2b2;
+  font-size: .7em;
+}
+
+div.formulario-datos-cliente {
+  border: solid 1px #b3b2b2;
+}
+
+div.formulario-datos-cliente div p {
+  border-bottom: 1px solid #b3b2b2;
+}
+
