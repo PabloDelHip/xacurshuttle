@@ -513,7 +513,7 @@ div.total-tours
         }
         span:last-child
         {
-            color: $colorGris;
+            color: #e0dfdf;
             font-size: .7em;
         }
     }
@@ -524,7 +524,43 @@ div.formulario-datos-cliente
     border: solid 1px $colorGris;
     div p
     {
-        border-bottom: 1px solid $colorGris;
+        border-bottom: 1px solid #e0dfdf;
+    }
+}
+
+div.resumen-compra
+{
+    font-family: 'Quicksand', sans-serif;
+    border: solid 1px $colorGris;
+    p.h3
+    {
+        border-bottom: solid 1px #e0dfdf;
+    }
+
+    div.tours-compra
+    {
+        div.datos-tour-resumen
+        {
+            border-bottom: 1px solid #e0dfdf;
+
+            p:first-child
+            {
+                color: $colorAzulMarino;
+                font-weight: 500;
+                font-size: 1.1em;
+            }
+            p:last-child
+            {
+                font-size: 1.1em;
+                font-weight: 500;
+            }
+        }
+
+        div.total-resumen
+        {
+            font-size: 1.3em;
+            font-weight: 500;
+        }
     }
 }
 

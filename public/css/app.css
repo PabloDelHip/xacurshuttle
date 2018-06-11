@@ -11134,7 +11134,7 @@ div.total-tours p span {
 }
 
 div.total-tours p span:last-child {
-  color: #b3b2b2;
+  color: #e0dfdf;
   font-size: .7em;
 }
 
@@ -11143,6 +11143,35 @@ div.formulario-datos-cliente {
 }
 
 div.formulario-datos-cliente div p {
-  border-bottom: 1px solid #b3b2b2;
+  border-bottom: 1px solid #e0dfdf;
+}
+
+div.resumen-compra {
+  font-family: 'Quicksand', sans-serif;
+  border: solid 1px #b3b2b2;
+}
+
+div.resumen-compra p.h3 {
+  border-bottom: solid 1px #e0dfdf;
+}
+
+div.resumen-compra div.tours-compra div.datos-tour-resumen {
+  border-bottom: 1px solid #e0dfdf;
+}
+
+div.resumen-compra div.tours-compra div.datos-tour-resumen p:first-child {
+  color: #06749f;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+div.resumen-compra div.tours-compra div.datos-tour-resumen p:last-child {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+div.resumen-compra div.tours-compra div.total-resumen {
+  font-size: 1.3em;
+  font-weight: 500;
 }
 

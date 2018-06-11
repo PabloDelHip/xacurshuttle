@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Tour;
 use Cart;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class Shopping_Cart extends Controller
 {
@@ -50,4 +51,18 @@ class Shopping_Cart extends Controller
     {
         return view('datosCliente');
     }
+
+    public function successfulPurchase()
+    {
+        $pdf = PDF::loadView('cupon', compact('products'));
+
+        $pdf->save('cupones/listado3.pdf');
+        Cart::destroy();
+        echo "Compra exitosa";
+    }
+
+    // public function successfulPurchase()
+    // {
+
+    // }
 }

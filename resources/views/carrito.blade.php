@@ -6,6 +6,9 @@
                                'paso2' => false,
                                'paso3' => false))
 
+<a href="{{ route('payment') }}" class="btn btn-warning">
+    Pagar con <i class="fa fa-cc-paypal fa-2x"></i>
+</a>
 {{-- {{ dd(Cart::content()) }} --}}
 <?php /**/ $total = 0 /**/ ?>
 <div class="container mt-5">
