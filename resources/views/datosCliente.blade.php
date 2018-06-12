@@ -12,19 +12,20 @@
                 <div class="text-center">
                     <p class="h3 pt-3 pb-2">Información del viajero titular</p>
                 </div>
-                <form>
+                <form action="{{ route('save-date-client') }}" method="POST">
+                        {{ csrf_field() }}
                         <div class="form-row">
                           <div class="form-group col-md-6">
                             <label for="nombre">* Nombre(s):</label>
-                            <input type="text" class="form-control form-control-sm" id="nombre" required>
+                            <input name="name" type="text" class="form-control form-control-sm" id="nombre" required>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="apellidos">* Apellidos:</label>
-                            <input type="text" class="form-control form-control-sm" id="apellidos" required>
+                            <input name="last_name" type="text" class="form-control form-control-sm" id="apellidos" required>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="email">* Email</label>
-                            <input type="email" class="form-control form-control-sm" id="email" required>
+                            <input name="email" type="email" class="form-control form-control-sm" id="email" required>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="confirmar-email">* Confirmar email</label>
@@ -32,15 +33,15 @@
                           </div>
                           <div class="form-group col-md-6">
                                 <label for="ciudad">Ciudad</label>
-                                <input type="text" class="form-control form-control-sm" id="ciudad">
+                                <input name="city" type="text" class="form-control form-control-sm" id="ciudad">
                            </div>
                            <div class="form-group col-md-6">
                                 <label for="estado-region">Estado o región</label>
-                                <input type="text" class="form-control form-control-sm" id="estado-region">
+                                <input name="state" type="text" class="form-control form-control-sm" id="estado-region">
                            </div>
                           <div class="form-group col-md-6">
                             <label for="pais">Pais</label>
-                            <select id="pais" class="form-control form-control-sm">
+                            <select name="country" id="pais" class="form-control form-control-sm">
                                 <option value="" ></option>
                                 <option value="AF" >Afghanistan</option>
                                 <option value="AL" >Albania</option>
@@ -287,11 +288,11 @@
                           </div>
                           <div class="form-group col-md-6">
                                 <label for="numero-telefono">Numero de teléfono</label>
-                                <input type="text" class="form-control form-control-sm" id="numero-telefono" required>
+                                <input name="phone" type="text" class="form-control form-control-sm" id="numero-telefono" required>
                            </div>
                            <div class="form-group col-md-6">
                                 <label for="hoteles">Hotel donde planea hospedarse:</label>
-                                <select id="hoteles" class="form-control form-control-sm">
+                                <select name="hotel" id="hoteles" class="form-control form-control-sm">
                                         <option value=""></option>
                                         <option value="All Ritmo Cancun">All Ritmo Cancun</option>
                                         <option value="Ambiance Suites">Ambiance Suites</option>
@@ -518,44 +519,17 @@
 
                         <div class="form-group">
                                 <label for="comentarios">Comentarios adicionales</label>
-                                <textarea class="form-control form-control-sm" id="comentarios" rows="5"></textarea>
+                                <textarea name="comments" class="form-control form-control-sm" id="comentarios" rows="5"></textarea>
                             </div>
                         <div class="form-row">
 
                         </div>
-                      </form>
+
             </div>
         </div>
         {{-- FINAL FORMULARIO --}}
-        <div class="col-4 mt-4 resumen-compra">
-            <div class="col-12 mt-4">
-                <div class="text-center">
-                    <p class="h3">Resumen de compra</p>
-                </div>
-            </div>
-            <div class="col-12 tours-compra">
-               <div>
-                    <?php /**/ $total = 0 /**/ ?>
-                    @foreach(Cart::content() as $tour)
-                        <div class="row datos-tour-resumen pb-3">
-                            <?php /**/ $total += $tour->options->total_sale /**/ ?>
-                            <div class="col-5">
-                                    <img style="width: 100%;" src="{{ url('/img/tours')}}/{{ $tour->options->image }}" alt="tour" class="img-thumbnail">
-                            </div>
-                            <div class="col-7">
-                                <p>{{$tour->name}}</p>
-                                <p class="text-right">${{number_format($tour->options->total_sale,2,".",",")}}</p>
-                            </div>
-                        </div>
-                    @endforeach
-                    <div class="col-12 text-right total-resumen mt-3">
-                            <p>Su Pago: ${{number_format($total,2,".",",")}} USD</p>
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Continuar</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+        @include('includes.detalles-venta')
+    </form>
     </div>
 </div>
 @stop

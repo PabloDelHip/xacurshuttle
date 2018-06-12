@@ -19,6 +19,9 @@ use PayPal\Api\RedirectUrls;
 use PayPal\Api\ExecutePayment;
 use PayPal\Api\PaymentExecution;
 use PayPal\Api\Transaction;
+use Barryvdh\DomPDF\Facade as PDF;
+use App\Mail\Email;
+use Illuminate\Support\Facades\Mail;
 
 use App\Order;
 use App\OrderItem;
@@ -26,6 +29,7 @@ use App\OrderItem;
 class PaypalController extends BaseController
 {
 	private $_api_context;
+    private $cupones=array();
 
 	public function __construct()
 	{
@@ -174,10 +178,19 @@ class PaypalController extends BaseController
         // foreach($cart as $producto){
 		// 	$this->saveOrderItem($producto, $order->id);
 		// }
-
-		foreach(Cart::content() as $tours){
-			$this->saveOrderItem($tours, $order->id);
-		}
+        $contador = 1;
+		foreach(Cart::content() as $tour){
+            $datos_tour_cupon = array(
+                "name"=>$tour->name,
+                "date"=> $tour->options->date,
+                "num_adult"=>$tour->options->num_adult,
+                "num_child"=>$tour->options->num_child
+            );
+            $this->saveOrderItem($tour, $order->id);
+            $this->createCoupon($order->id,$contador,$datos_tour_cupon);
+            $contador++;
+        }
+        $this->successfulPurchase();
 	}
 
 	protected function saveOrderItem($tour, $order_id)
@@ -188,5 +201,43 @@ class PaypalController extends BaseController
 			'tour_id' => $tour->id,
 			'order_id' => $order_id
 		]);
-	}
+    }
+
+    protected function createCoupon($order_id,$num_cupon_generado,$datos_tour_cupon)
+    {
+        $numGeneradoCupon = $num_cupon_generado;
+
+        $datos_cupon = array(
+            'num_cupon'=>$order_id,
+            'numGeneradoCupon'=>$numGeneradoCupon
+        );
+
+        session(['datos_tour_cupon'=>$datos_tour_cupon]);
+        session(['datos_cupon'=>$datos_cupon]);
+        $pdf = PDF::loadView('cupon',compact('num_cupon','client_data','numGeneradoCupon'));
+        $pdf->save('cupones/cupon-'.$order_id.'-'.$num_cupon_generado.'.pdf');
+        //return $pdf->stream();
+        session(['cupon'=>'/cupon-'.$order_id.'-'.$num_cupon_generado.'.pdf']);
+
+        array_push($this->cupones,'/cupon-'.$order_id.'-'.$num_cupon_generado.'.pdf');
+
+
+        // return $pdf->stream();
+    }
+
+    protected function successfulPurchase()
+    {
+        session(['cupones'=>$this->cupones]);
+        $client_data = session('client-data');
+        //enviar Email
+       // Cart::destroy();
+       $objDemo = new \stdClass();
+        $objDemo->demo_one = 'Demo One Value';
+        $objDemo->demo_two = 'Demo Two Value';
+        $objDemo->sender = 'SenderUserName';
+        $objDemo->receiver = 'ReceiverUserName';
+
+        Mail::to($client_data['email'])->send(new Email($objDemo));
+
+    }
 }

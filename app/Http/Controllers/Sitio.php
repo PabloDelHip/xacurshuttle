@@ -6,11 +6,15 @@ use App\Tour;
 use App\Categorie;
 use App\Imagetour;
 use Cart;
+use Barryvdh\DomPDF\Facade as PDF;
+use Session;
 
 class Sitio extends Controller
 {
     public function home()
     {
+        // $valores = session('sesion');
+        // dd($valores);
         $categories = Categorie::all()->where('active', '=',true)->where('see_home', '=',true);
         return view('home',compact('categories'));
     }
@@ -41,6 +45,10 @@ class Sitio extends Controller
     public function infoTour($tour = '')
     {
 
+        // $pdf = PDF::loadView('cupon', compact('products'));
+
+        // $pdf->save('cupones/listado5.pdf');
+        // return $pdf->stream();
         $tourInfo = Tour::all()->where('url', '=',$tour);
        // dd($tourInfo);
         $dias_activo_tour="";

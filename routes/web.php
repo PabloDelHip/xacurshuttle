@@ -22,7 +22,9 @@ Route::post('ingresar-carrito', ['as' => 'ingresar-carrito' , 'uses' => 'Shoppin
 Route::get('carrito', ['as' => 'carrito' , 'uses' => 'Shopping_Cart@contentCart']);
 Route::get('{rowid?}/eliminar-tour', ['as' => '{rowid?}/eliminar-tour', 'uses' => 'Shopping_Cart@deleteCart']);
 Route::get('datos-del-cliente', ['as' => 'datos-del-cliente', 'uses' => 'Shopping_Cart@clientData']);
-Route::get('compra-exitosa', ['as' => 'compra-exitosa', 'uses' => 'Shopping_Cart@successfulPurchase']);
+Route::get('confirmacion', ['as' => 'confirmacion' , 'uses' => 'Shopping_Cart@confirmation']);
+Route::post('save-date-client', ['as' => 'save-date-client' , 'uses' => 'Shopping_Cart@saveDateClient']);
+Route::get('compra-exitosa', ['as' => 'compra-exitosa', 'uses' => 'Sitio@home']);
 Route::get('cupon', ['as' => 'cupon', 'uses' => 'Shopping_Cart@cupon']);
 
 

@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Tour;
 use Cart;
-use Barryvdh\DomPDF\Facade as PDF;
+use App\Mail\Email;
+use Illuminate\Support\Facades\Mail;
 
 class Shopping_Cart extends Controller
 {
@@ -52,13 +53,28 @@ class Shopping_Cart extends Controller
         return view('datosCliente');
     }
 
-    public function successfulPurchase()
-    {
-        $pdf = PDF::loadView('cupon', compact('products'));
 
-        $pdf->save('cupones/listado3.pdf');
-        Cart::destroy();
-        echo "Compra exitosa";
+    public function saveDateClient(Request $request)
+    {
+        $data_client = array(
+            "name"=>$request->name,
+            "last_name"=>$request->last_name,
+            "email"=>$request->email,
+            "city"=>$request->city,
+            "state"=>$request->state,
+            "country"=>$request->country,
+            "phone"=>$request->phone,
+            "hotel"=>$request->hotel,
+            "comments"=>$request->comments
+        );
+        session(['client-data'=>$data_client]);
+        return redirect()->to('/confirmacion');
+    }
+
+    public function confirmation()
+    {
+        $client_data = session('client-data');
+        return view('confirmacion',compact('client_data'));
     }
 
     // public function successfulPurchase()
