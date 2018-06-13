@@ -20,7 +20,7 @@
                     <div class="form-group row">
                         <label for="numNinos" class="col-sm-7 col-form-label m-0">Num Niños <span>(7-11)</span></label>
                         <div class="col-sm-5 m-0">
-                            <input name="num_ninos" type="number" class="form-control" id="numNinos" value="1" min="0" max="160">
+                            <input name="num_ninos" type="number" class="form-control" id="numNinos" value="0" min="0" max="160">
 
                         </div>
                     </div>
@@ -38,7 +38,7 @@
         </div>
     @else
         <div class="row p-0 m-0">
-            <div class="card text-center">
+            {{--  <div class="card text-center">
                   <h5 class="card-header p-1 tituloBuscar">Busca Tour</h5>
                   <div class="card-body pt-2 m-0">
                       <select class="js-example-basic-single" name="state">
@@ -57,7 +57,7 @@
                     </select>
                     <a href="#" class="btn btn-primary   mt-4">Ver Tour</a>
                   </div>
-            </div>
+            </div>  --}}
         </div>
         <!-- Buscar tour -->
     @endif

@@ -12,7 +12,7 @@
 <div class="container mt-5">
     @forelse(Cart::content() as $tour)
         <?php /**/ $total += $tour->options->total_sale /**/ ?>
-        <div class="row mb-5">
+        <div class="row mb-3 p-3" style="background-color: #fff;">
             <div class="col-3">
                 <img style="width: 100%;" src="{{ url('/img/tours')}}/{{ $tour->options->image }}" alt="tour" class="img-thumbnail">
             </div>

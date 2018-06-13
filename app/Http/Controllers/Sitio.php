@@ -19,6 +19,20 @@ class Sitio extends Controller
         return view('home',compact('categories'));
     }
 
+    public function categoria($url)
+    {
+        $Categorias = Categorie::all()->where('url', '=',$url);
+        foreach($Categorias as $Categoria)
+        {
+            $categorie_name=$Categoria->name;
+            $description = $Categoria->description;
+            $idCategoria =  Categorie::find($Categoria->id);
+
+        }
+        $tours = $idCategoria->tours;
+        return view('categorias',compact('tours','categorie_name','description'));
+    }
+
     public static  function toursHome($id_categorie)
     {
         $categories = Categorie::find($id_categorie);
@@ -45,10 +59,7 @@ class Sitio extends Controller
     public function infoTour($tour = '')
     {
 
-        // $pdf = PDF::loadView('cupon', compact('products'));
 
-        // $pdf->save('cupones/listado5.pdf');
-        // return $pdf->stream();
         $tourInfo = Tour::all()->where('url', '=',$tour);
        // dd($tourInfo);
         $dias_activo_tour="";

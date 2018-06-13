@@ -82,7 +82,7 @@
 					         		 Tours
 					        		</a>
 						        	<div sty class="dropdown-menu sub-menu" aria-labelledby="navbarDropdown">
-						          		<a class="dropdown-item" href="{{ url('/cancun/tours-aventuras') }}">Tours en Cancún</a>
+						          		<a class="dropdown-item" href="{{ url('/aventura/categoria') }}">Aventura</a>
 						          		<a class="dropdown-item" href="#">Another action</a>
 						         	<div class="dropdown-divider"></div>
 						          		<a class="dropdown-item" href="#">Something else here</a>
