@@ -28,9 +28,11 @@
 
 		<!-- FINAL SLIDER -->
 		<div class="container p-md-0">
+
 			<div class="row">
 
 				<div class="col-md-9 p-md-0">
+
 
 					<span>
 						<div class="row p-0 m-0">
@@ -60,6 +62,181 @@
 								</div>
 							</article>
                         </div>
+                        <div class="row col-12 pl-5 pr-5">
+                                <div class="slider responsive contenedor-carrousel">
+                                    <div class="col-4">
+                                        <div>
+                                            <div class="contenedor">
+                                                        <a href="#">
+
+                                                            <img src="{{ url('img/tours/tulum-al-amanecer.png') }}" alt="xcaret" class="img-fluid" style="width: 100%;">
+                                                        </a>
+                                            </div>
+                                            <div class="contenedor-texto p-2 mb-1">
+                                                <h2>Tulum al amanecer</h2>
+                                                <div>
+                                                    <p><i class="fa fa-clock-o" aria-hidden="true"></i> Duración: 12 horas</p>
+                                                    <p><i class="fa fa-user" aria-hidden="true"></i> Persona: 1</p>
+                                                    <p class="precio-contenedor">$233</p>
+                                                    <a style="float: right;" href="#" class="btn btn-sm">Ver tour</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                            <div>
+                                                <div class="contenedor">
+                                                            <a href="#">
+
+                                                                <img src="{{ url('img/tours/tulum-al-amanecer.png') }}" alt="xcaret" class="img-fluid" style="width: 100%;">
+                                                            </a>
+                                                </div>
+                                                <div class="contenedor-texto p-2 mb-1">
+                                                    <h2>Tulum al amanecer</h2>
+                                                    <div>
+                                                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> Duración: 12 horas</p>
+                                                        <p><i class="fa fa-user" aria-hidden="true"></i> Persona: 1</p>
+                                                        <p class="precio-contenedor">$233</p>
+                                                        <a style="float: right;" href="#" class="btn btn-sm">Ver tour</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                                <div>
+                                                    <div class="contenedor">
+                                                                <a href="#">
+
+                                                                    <img src="{{ url('img/tours/tulum-al-amanecer.png') }}" alt="xcaret" class="img-fluid" style="width: 100%;">
+                                                                </a>
+                                                    </div>
+                                                    <div class="contenedor-texto p-2 mb-1">
+                                                        <h2>Tulum al amanecer</h2>
+                                                        <div>
+                                                            <p><i class="fa fa-clock-o" aria-hidden="true"></i> Duración: 12 horas</p>
+                                                            <p><i class="fa fa-user" aria-hidden="true"></i> Persona: 1</p>
+                                                            <p class="precio-contenedor">$233</p>
+                                                            <a style="float: right;" href="#" class="btn btn-sm">Ver tour</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                    <div>
+                                                        <div class="contenedor">
+                                                                    <a href="#">
+
+                                                                        <img src="{{ url('img/tours/tulum-al-amanecer.png') }}" alt="xcaret" class="img-fluid" style="width: 100%;">
+                                                                    </a>
+                                                        </div>
+                                                        <div class="contenedor-texto p-2 mb-1">
+                                                            <h2>Tulum al amanecer</h2>
+                                                            <div>
+                                                                <p><i class="fa fa-clock-o" aria-hidden="true"></i> Duración: 12 horas</p>
+                                                                <p><i class="fa fa-user" aria-hidden="true"></i> Persona: 1</p>
+                                                                <p class="precio-contenedor">$233</p>
+                                                                <a style="float: right;" href="#" class="btn btn-sm">Ver tour</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                        <div>
+                                                            <div class="contenedor">
+                                                                        <a href="#">
+
+                                                                            <img src="{{ url('img/tours/tulum-al-amanecer.png') }}" alt="xcaret" class="img-fluid" style="width: 100%;">
+                                                                        </a>
+                                                            </div>
+                                                            <div class="contenedor-texto p-2 mb-1">
+                                                                <h2>Tulum al amanecer</h2>
+                                                                <div>
+                                                                    <p><i class="fa fa-clock-o" aria-hidden="true"></i> Duración: 12 horas</p>
+                                                                    <p><i class="fa fa-user" aria-hidden="true"></i> Persona: 1</p>
+                                                                    <p class="precio-contenedor">$233</p>
+                                                                    <a style="float: right;" href="#" class="btn btn-sm">Ver tour</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                            <div>
+                                                                <div class="contenedor">
+                                                                            <a href="#">
+
+                                                                                <img src="{{ url('img/tours/tulum-al-amanecer.png') }}" alt="xcaret" class="img-fluid" style="width: 100%;">
+                                                                            </a>
+                                                                </div>
+                                                                <div class="contenedor-texto p-2 mb-1">
+                                                                    <h2>Tulum al amanecer</h2>
+                                                                    <div>
+                                                                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> Duración: 12 horas</p>
+                                                                        <p><i class="fa fa-user" aria-hidden="true"></i> Persona: 1</p>
+                                                                        <p class="precio-contenedor">$233</p>
+                                                                        <a style="float: right;" href="#" class="btn btn-sm">Ver tour</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-4">
+                                                                <div>
+                                                                    <div class="contenedor">
+                                                                                <a href="#">
+
+                                                                                    <img src="{{ url('img/tours/tulum-al-amanecer.png') }}" alt="xcaret" class="img-fluid" style="width: 100%;">
+                                                                                </a>
+                                                                    </div>
+                                                                    <div class="contenedor-texto p-2 mb-1">
+                                                                        <h2>Tulum al amanecer</h2>
+                                                                        <div>
+                                                                            <p><i class="fa fa-clock-o" aria-hidden="true"></i> Duración: 12 horas</p>
+                                                                            <p><i class="fa fa-user" aria-hidden="true"></i> Persona: 1</p>
+                                                                            <p class="precio-contenedor">$233</p>
+                                                                            <a style="float: right;" href="#" class="btn btn-sm">Ver tour</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                    <div>
+                                                                        <div class="contenedor">
+                                                                                    <a href="#">
+
+                                                                                        <img src="{{ url('img/tours/tulum-al-amanecer.png') }}" alt="xcaret" class="img-fluid" style="width: 100%;">
+                                                                                    </a>
+                                                                        </div>
+                                                                        <div class="contenedor-texto p-2 mb-1">
+                                                                            <h2>Tulum al amanecer</h2>
+                                                                            <div>
+                                                                                <p><i class="fa fa-clock-o" aria-hidden="true"></i> Duración: 12 horas</p>
+                                                                                <p><i class="fa fa-user" aria-hidden="true"></i> Persona: 1</p>
+                                                                                <p class="precio-contenedor">$233</p>
+                                                                                <a style="float: right;" href="#" class="btn btn-sm">Ver tour</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                        <div>
+                                                                            <div class="contenedor">
+                                                                                        <a href="#">
+
+                                                                                            <img src="{{ url('img/tours/tulum-al-amanecer.png') }}" alt="xcaret" class="img-fluid" style="width: 100%;">
+                                                                                        </a>
+                                                                            </div>
+                                                                            <div class="contenedor-texto p-2 mb-1">
+                                                                                <h2>Tulum al amanecer</h2>
+                                                                                <div>
+                                                                                    <p><i class="fa fa-clock-o" aria-hidden="true"></i> Duración: 12 horas</p>
+                                                                                    <p><i class="fa fa-user" aria-hidden="true"></i> Persona: 1</p>
+                                                                                    <p class="precio-contenedor">$233</p>
+                                                                                    <a style="float: right;" href="#" class="btn btn-sm">Ver tour</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                </div>
+                            </div>
 
                         @foreach(Sitio::toursHome($categorie->id) as $tour)
 

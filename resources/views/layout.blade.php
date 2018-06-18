@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="{{ url('/img/logo.ico') }}" />
 	<title>Tours y actividades en Cancun y la Riviera Maya</title>
-	<link rel="stylesheet" href="{{ url('/css/app.css') }}">
+    <link rel="stylesheet" href="{{ url('/css/app.css') }}">
+    <link rel="stylesheet" href="{{ url('/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ url('/css/slick-theme.css') }}">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-
+	{{-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/177aa3b6ac.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 	<link rel="stylesheet" type="text/css" href="{{ url('/engine1/style.css') }}" />
@@ -19,11 +21,13 @@
 </head>
 <body  style="background-image: url('{{ url('/img/textura.png') }}');">
 
+
+
 	<header class="col-12">
 		<div class="container datos-contacto-header pt-1 pb-1">
 			<div class="row justify-content-end">
 				<div class="datos-header">
-					<i class="fab fa-whatsapp"></i>
+					<i class="fa fa-whatsapp" aria-hidden="true"></i>
 					<span>
 						<a href="https://api.whatsapp.com/send?phone=5219983183166&text=Buen dia, estoy interesado en unos tours" target="_blank"> +52 1 998 318 3166</a>
 					</span>
@@ -256,7 +260,12 @@
 	<script src="{{ url('/js/jquery.nice-select.min.js') }}"></script>
 	<script src="{{ url('/js/fastclick.js') }}"></script>
 	<script src="{{ url('/js/prism.js') }}"></script>
-	<script src="{{ url('/js/parallax.min.js') }}"></script>
+    <script src="{{ url('/js/parallax.min.js') }}"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
 
 		<!-- Smartsupp Live Chat script -->
 	<script type="text/javascript">
@@ -271,6 +280,42 @@
 	</script>
 
 <script>
+          $('.responsive').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                  infinite: true,
+                  dots: true
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+              // You can unslick at a given breakpoint now by adding:
+              // settings: "unslick"
+              // instead of a settings object
+            ]
+          });
+
     $(document).ready(function() {
       $('select:not(.ignore)').niceSelect();
       FastClick.attach(document.body);

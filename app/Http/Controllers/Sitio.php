@@ -110,6 +110,11 @@ class Sitio extends Controller
 
     }
 
+    public function compraExitosa()
+    {
+        return view('compra-exitosa');
+    }
+
     public function contactanos()
     {
     	return view('contactanos');
