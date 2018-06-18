@@ -13,10 +13,10 @@
     @forelse(Cart::content() as $tour)
         <?php /**/ $total += $tour->options->total_sale /**/ ?>
         <div class="row mb-3 p-3" style="background-color: #fff;">
-            <div class="col-3">
+            <div class="col-md-3 col-sm-12">
                 <img style="width: 100%;" src="{{ url('/img/tours')}}/{{ $tour->options->image }}" alt="tour" class="img-thumbnail">
             </div>
-            <div class="col-6 info-tour-pasos">
+            <div class="col-md-6 col-sm-12 info-tour-pasos">
                 <p class="h4">{{ $tour->name }}</p>
                 <p class=" m-0 mt-2 mb-1">Fecha del tour: <b>$ {{$tour->options->date }}</b> </p>
                 <p class=" m-0 mb-1">Numero de Adulto: <b>{{$tour->options->num_adult }}</b> </p>
@@ -30,9 +30,13 @@
 
 
             </div>
-            <div class="col-3 text-right pasos-total-pagar" style="border-left: solid 1px #000;">
-                <p><b>$ {{$tour->options->total_sale }}</b> <span>USD</span> </p>
-                <a href="{{ url("{$tour->rowId}", "eliminar-tour") }}">
+            <div class="col-md-3 col-sm-12 text-right pasos-total-pagar">
+                <p><b>$ {{$tour->options->total_sale }}</b> <span>USD</span>
+                        <a class="ocultar ver-movil basura-movil" href="{{ url("{$tour->rowId}", "eliminar-tour") }}">
+                            <p  class="p-0"><i class="far fa-trash-alt"></i></p>
+                        </a>
+                </p>
+                <a class="ocultar-movil ver" href="{{ url("{$tour->rowId}", "eliminar-tour") }}">
                     <p  class="p-0"><i class="far fa-trash-alt"></i></p>
                 </a>
             </div>
@@ -51,7 +55,7 @@
                     Seguir Comprando
                 </a>
         </div>
-        <div class="col-3 text-right total-tours">
+        <div class="col-md-3 col-sm-12 text-right total-tours">
                 <p>Total: <span>${{ number_format($total, 2, '.', ',') }}</span> <span>USD</span> </p>
                 <a class="btn btn-primary" href="{{ url('/datos-del-cliente')}}" role="button">CONTINUAR <i class="fas fa-arrow-right"></i></a>
         </div>

@@ -4,7 +4,7 @@
 @include('includes.migajas', array('miVar' => 'Tours > Cancún'))
 <div class="container">
 		<div class="row mt-2">
-			<div class="col-9 p-0 m-0">
+			<div class="col-md-9 col-sm-12 p-0 m-0">
 				<h1 class="titulo pb-1 mb-2 mt-2">
                     @foreach($tourInfo as $tour)
                         {!! $tour->name !!}
@@ -15,7 +15,7 @@
 						<div class="carousel-inner">
                             @foreach($image->imagetour as $key => $img)
                                 <div  class="carousel-item @if($key==0) active @endif" >
-                                    <img src="{{ url('/img/tours')}}/{{ $img->image }}" alt="">
+                                    <img src="{{ url('/img/tours')}}/{{ $img->image }}" class="img-fluid" alt="">
                                 </div>
                             @endforeach
 						</div>

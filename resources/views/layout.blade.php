@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="{{ url('/css/slick.css') }}">
     <link rel="stylesheet" href="{{ url('/css/slick-theme.css') }}">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	{{-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> --}}
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" /> --}}
     <script src="https://use.fontawesome.com/177aa3b6ac.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
@@ -19,7 +19,8 @@
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
-<body  style="background-image: url('{{ url('/img/textura.png') }}');">
+{{-- background-image: url('{{ url('/img/textura.png') }}');" --}}
+<body  style=" background-image: url('{{ url('/img/textura.png') }}');">
 
 
 
@@ -150,7 +151,7 @@
 
 	<footer>
 		<div class="footer mt-4 pt-3">
-			<div class="row justify-content-center">
+			{{-- <div class="row justify-content-center">
 				<div class="col-12 text-center">
 					<p class="texto-mailchin m-0">suscríbete para encontrar las mejores ofertas</p>
 				</div>
@@ -167,7 +168,7 @@
 					  <button type="submit" class="btn btn-primary mb-2 btn-sm">Suscribirme</button>
 					</form>
 				</div>
-			</div>
+			</div> --}}
 			<div class="row justify-content-center">
 			    <div class="col-6 text-center iconos-footer mb-3 pb-2">
 			     	<a href="#">
@@ -284,8 +285,8 @@
             dots: true,
             infinite: true,
             speed: 300,
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 4,
+            slidesToScroll: 4,
             responsive: [
               {
                 breakpoint: 1024,

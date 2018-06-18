@@ -1,4 +1,4 @@
-<div class="col-4 mt-4 resumen-compra" style="background-color: #fff;">
+<div class="col-md-4 col-sm-12 mt-4 resumen-compra" style="background-color: #fff;">
         <div class="col-12 mt-4">
             <div class="text-center">
                 <p class="h3">Resumen de compra</p>

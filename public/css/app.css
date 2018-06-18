@@ -10711,6 +10711,42 @@ pre[class*="language-"] {
   cursor: help;
 }
 
+@media only screen and (max-width: 500px) {
+  header {
+    background-color: red !important;
+  }
+
+  .ver-movil {
+    display: block !important;
+  }
+
+  .ocultar-movil {
+    display: none !important;
+  }
+
+  div.pasos-total-pagar {
+    border: none !important;
+    border-top: 1px solid #000 !important;
+  }
+
+  div.info-tour-pasos {
+    text-align: center;
+  }
+
+  .basura-movil {
+    font-size: 1.5em;
+    color: #fa4a4a;
+  }
+}
+
+.ocultar {
+  display: none;
+}
+
+.ver {
+  display: block;
+}
+
 header {
   background-color: #C2185B;
 }
@@ -11178,6 +11214,7 @@ div.linea-pasos div p {
 }
 
 div.pasos-total-pagar {
+  border-left: solid 1px #000;
   font-family: 'Quicksand', sans-serif;
 }
 

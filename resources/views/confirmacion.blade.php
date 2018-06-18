@@ -6,7 +6,7 @@
                                'paso3' => true))
     <div class="container">
         <div class="row">
-            <div class="col-8 mt-4">
+            <div class="col-md-8 col-sm-12 mt-4">
                 <div class="card">
                     <div class="card-header">
                         Featured
