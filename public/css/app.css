@@ -10712,10 +10712,6 @@ pre[class*="language-"] {
 }
 
 @media only screen and (max-width: 500px) {
-  header {
-    background-color: red !important;
-  }
-
   .ver-movil {
     display: block !important;
   }
@@ -10737,6 +10733,30 @@ pre[class*="language-"] {
     font-size: 1.5em;
     color: #fa4a4a;
   }
+
+  div#tamano-parallax {
+    height: 150px !important;
+  }
+
+  div.descripcion-tour {
+    text-align: center !important;
+  }
+
+  div.descripcion-tour div {
+    margin: 0 !important;
+  }
+
+  div.descripcion-tour div img {
+    width: 100% !important;
+  }
+
+  div.precio-tour {
+    text-align: center !important;
+  }
+
+  .boton-ver-tour {
+    width: 100%;
+  }
 }
 
 .ocultar {
@@ -10745,6 +10765,10 @@ pre[class*="language-"] {
 
 .ver {
   display: block;
+}
+
+div#tamano-parallax {
+  height: 300px;
 }
 
 header {

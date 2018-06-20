@@ -3,22 +3,32 @@
 
 @section('contenido')
 
+<div class="parallax-window" id="tamano-parallax" data-parallax="scroll" data-image-src="{{ url('/img/encabezado.jpg') }}">
+</div>
+@include('includes.migajas', array('miVar' => 'Tours > Cancún'))
 <div class="container">
     <div class="row">
         <div class="col-md-9 p-md-0">
-            <div class="col-12" style="border-bottom: 1px solid #000;">
-                <h1 class="nombre-tours mt-3" style="font-size: 27px;" >{{ $categorie_name }}</h1>
-            </div>
-            <div class="col-12">
-                    {!! $description !!}
-            </div>
+                <span>
+						<div class="row p-0 m-0">
+							<article class="col-12 mt-4">
+								<h1 class="titulo pb-1 mb-2">{{ $categorie_name }}</h1>
+								<h3 class="text-capitalize">Los mejores tours en cancún a precio de descuento</h3>
+								<div class="contenido text-justify">
+									<p>
+                                            {!! $description !!}
+									</p></div>
+							</article>
+						</div>
+						<!-- FINAL DESCRIPCION -->
+					</span>
                 @foreach($tours as $tour)
 
                 <div class="row p-0 m-0 pt-2 pb-2 mb-3 descripcion-tour">
-                    <div class="col-3 p-0 m-0 ml-2">
+                    <div class="col-md-3 col-sm-12 p-0 m-0 ml-2">
                         <img src="{{ url('img/tours/') }}/{{$tour->image}}" alt="xcaret" class="img-fluid p-0 m-0">
                     </div>
-                    <div class="col-5 p-0 m-0">
+                    <div class="col-md-5 col-sm-12 p-0 m-0">
                         <h3 class="nombre-tours p-0">
                             {{$tour->name}}
                         </h3>
@@ -27,7 +37,7 @@
                         </p>
                     </div>
 
-                    <div class="col precio-tour text-right">
+                    <div class="col-md col-sm-12 precio-tour text-right">
                         <p class="m-0">
                                 <span>Adulto: </span>
                                 <del>${{ $tour->adult_discount_price }}</del>
