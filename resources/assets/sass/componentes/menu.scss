@@ -157,6 +157,12 @@ div.menu ul li:hover > a{
 	background-color: $colorAzulMarino;
 }
 
+.slick-prev:before,
+.slick-next:before
+{
+    color: $colorRosadoLogo !important;
+}
+
 /* div.menu ul li:hover > a {
     color: #fff !important;
 } */

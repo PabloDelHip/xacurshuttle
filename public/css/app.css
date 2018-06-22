@@ -10837,6 +10837,11 @@ div.menu ul li:hover > a {
   background-color: #06749f;
 }
 
+.slick-prev:before,
+.slick-next:before {
+  color: #EA3E7F !important;
+}
+
 /* div.menu ul li:hover > a {
     color: #fff !important;
 } */
