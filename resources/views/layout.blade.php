@@ -30,18 +30,18 @@
 				<div class="datos-header">
 					<i class="fa fa-whatsapp" aria-hidden="true"></i>
 					<span>
-						<a href="https://api.whatsapp.com/send?phone=5219983183166&text=Buen dia, estoy interesado en unos tours" target="_blank"> +52 1 998 318 3166</a>
+						<a href="https://api.whatsapp.com/send?phone=5219981475180&text=Buen dia, estoy interesado en unos tours" target="_blank"> +52 1 998 147 5180</a>
 					</span>
 				</div>
-				<div class="datos-header">
+				{{--  <div class="datos-header">
 					<i class="fas fa-phone"></i>
 					<span>
-						<a href="tel:9983850941"> +52 1 998 385 0941</a>
+						<a href="tel:011521">011521</a>
 					</span>
-				</div>
+				</div>  --}}
 				<div class="datos-header">
 					<span>
-						<a href="mailto:reservas@gocancuntours.com.mx"><i class="fas fa-envelope"></i> reservas@gocancuntours.com.mx</a>
+						<a href="mailto:rodea@xacurshuttle.com"><i class="fas fa-envelope"></i> rodea@xacurshuttle.com</a>
 					</span>
 				</div>
 
@@ -242,7 +242,7 @@
 
 			<div class="row p-0 m-0">
 				<div class="col-12 text-center">
-					<p class="p-0 m-0 copy">&copy; Todos los derechos reservados Go Cancun Tours 2018</p>
+					<p class="p-0 m-0 copy">&copy; Todos los derechos reservados Xacurshuttle 2018</p>
 				</div>
 			</div>
 		</div>
