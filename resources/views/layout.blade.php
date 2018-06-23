@@ -369,6 +369,7 @@
                 //Crear el datepicker
                 $("#datepicker").datepicker({
                 beforeShowDay: noExcursion,
+                minDate: 2,
             });
         @endif
     @endif

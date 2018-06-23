@@ -18,7 +18,7 @@
             </div>
             <div class="col-md-6 col-sm-12 info-tour-pasos">
                 <p class="h4">{{ $tour->name }}</p>
-                <p class=" m-0 mt-2 mb-1">Fecha del tour: <b>$ {{$tour->options->date }}</b> </p>
+                <p class=" m-0 mt-2 mb-1">Fecha del tour: <b>{{$tour->options->date }}</b> </p>
                 <p class=" m-0 mb-1">Numero de Adulto: <b>{{$tour->options->num_adult }}</b> </p>
 
                 <p class="m-0 mb-1">Precio tour: <b>$ {{$tour->options->adult_price }}</b> <span>USD</span> </p>
