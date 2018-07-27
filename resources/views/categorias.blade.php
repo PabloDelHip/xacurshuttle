@@ -72,8 +72,6 @@
         </div>
         {{--  FINAL LISTA TOURS  --}}
 
-        @include('includes.aside')
-
     </div>
 </div>
 
