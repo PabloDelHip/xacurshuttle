@@ -88,7 +88,7 @@
 					        		</a>
 						        	<div sty class="dropdown-menu sub-menu" aria-labelledby="navbarDropdown">
 						          		<a class="dropdown-item" href="{{ url('/aventura/categoria') }}">Aventura</a>
-						          		<a class="dropdown-item" href="{{ url('/grupos/categoria') }}">Nado con delfines</a>
+						          		<a class="dropdown-item" href="{{ url('/grupos/categoria') }}">Grupos</a>
 						          		<a class="dropdown-item" href="{{ url('/familia/categoria') }}">Familia</a>
 						          	<!-- 	<a class="dropdown-item" href="#">Another action</a>
 						         	<div class="dropdown-divider"></div>
