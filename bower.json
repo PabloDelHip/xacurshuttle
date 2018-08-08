@@ -1,0 +1,17 @@
+{
+  "name": "tours",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Pablo Delfin Hipolito <pablodelhip@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/PabloDelHip/xacurshuttle",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -13,58 +13,18 @@
     {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" /> --}}
     <script src="https://use.fontawesome.com/177aa3b6ac.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="{{ url('/autocom/jquery.easy-autocomplete.min.js') }}"></script> 
 
-	<link rel="stylesheet" type="text/css" href="{{ url('/engine1/style.css') }}" />
-    <script type="text/javascript" src="{{ url('/engine1/jquery.js') }}"></script>
+<!-- CSS file -->
+<link rel="stylesheet" href="{{ url('/autocom/easy-autocomplete.min.css') }}"> 
+
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 {{-- background-image: url('{{ url('/img/textura.png') }}');" --}}
 <body  style=" background-image: url('{{ url('/img/textura.png') }}');">
 
-
-
-	<header class="col-12">
-		<div class="container datos-contacto-header pt-1 pb-1">
-			<div class="row justify-content-end">
-				<div class="datos-header">
-					<i class="fa fa-whatsapp" aria-hidden="true"></i>
-					<span>
-						<a href="https://api.whatsapp.com/send?phone=5219981475180&text=Buen dia, estoy interesado en unos tours" target="_blank"> +52 1 998 147 5180</a>
-					</span>
-				</div>
-				{{--  <div class="datos-header">
-					<i class="fas fa-phone"></i>
-					<span>
-						<a href="tel:011521">011521</a>
-					</span>
-				</div>  --}}
-				<div class="datos-header">
-					<span>
-						<a href="mailto:rodea@xacurshuttle.com"><i class="fas fa-envelope"></i> rodea@xacurshuttle.com</a>
-					</span>
-				</div>
-
-				<div class="datos-header carrito">
-					<span>
-                    <a href="{{ url('/carrito') }}"><i class="fas fa-shopping-cart"></i> {{Cart::content()->count()}}</a>
-					</span>
-				</div>
-				<div>
-					<img src="{{ url('/img/bandera-mexico.png') }}" alt="bandera de mexico">
-				</div>
-
-				<div class=" datos-header box justify-content-start">
-
-			      <select>
-			        <option value="MXN">MXN</option>
-			        <option value="USD">USD</option>
-			      </select>
-
-			    </div>
-			</div>
-		</div>
-	</header>
 	<!-- FINAL HEADER -->
 
 	<div class="contenedor-menu">
@@ -82,7 +42,7 @@
 					      		<li class="nav-item">
 					        		<a class="nav-link" href="{{ url('/') }}">Inicio <span class="sr-only">(current)</span></a>
 					      		</li>
-					      		<li class="nav-item dropdown">
+					      		<!-- <li class="nav-item dropdown">
 					        		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					         		 Tours
 					        		</a>
@@ -90,12 +50,8 @@
 						          		<a class="dropdown-item" href="{{ url('/aventura/categoria') }}">Aventura</a>
 						          		<a class="dropdown-item" href="{{ url('/grupos/categoria') }}">Grupos</a>
 						          		<a class="dropdown-item" href="{{ url('/familia/categoria') }}">Familia</a>
-						          	<!-- 	<a class="dropdown-item" href="#">Another action</a>
-						         	<div class="dropdown-divider"></div>
-						          		<a class="dropdown-item" href="#">Something else here</a>
-						        	</div> -->
 					      		</li>
-					      		<!-- <li class="nav-item dropdown">
+					      		<li class="nav-item dropdown">
 					        		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					         		 Parques
 					        		</a>
@@ -116,31 +72,32 @@
 						         	<div class="dropdown-divider"></div>
 						          		<a class="dropdown-item" href="#">Something else here</a>
 						        	</div>
-					      		</li>
-					      		<li class="nav-item">
-					        		<a class="nav-link" href="#">Ofertas <span class="sr-only">(current)</span></a>
-					      		</li>
-					      		<li class="nav-item">
-					        		<a class="nav-link" href="#">Habitaciones <span class="sr-only">(current)</span></a>
-					      		</li>
-					      		<li class="nav-item">
-					        		<a class="nav-link" href="#">Transportacion <span class="sr-only">(current)</span></a>
-					      		</li>
-					      		<li class="nav-item dropdown">
-					        		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					         		 Información
-					        		</a>
-						        	<div class="dropdown-menu sub-menu" aria-labelledby="navbarDropdown">
-						          		<a class="dropdown-item" href="#">Action</a>
-						          		<a class="dropdown-item" href="#">Another action</a>
-						         	<div class="dropdown-divider"></div>
-						          		<a class="dropdown-item" href="#">Something else here</a>
-						        	</div>
 					      		</li> -->
 					      		<li class="nav-item">
+					        		<a class="nav-link" href="{{ url('/sitios-arqueologicos/categoria') }}">Zonas Arqueologicas <span class="sr-only">(current)</span></a>
+					      		</li>
+					      		<li class="nav-item">
+					        		<a class="nav-link" href="{{ url('/xperiencias-xcaret/categoria') }}">Experiencia Xcaret<span class="sr-only">(current)</span></a>
+					      		</li>
+					      		<li class="nav-item">
+					        		<a class="nav-link" href="{{ url('/atv/categoria') }}">ATV<span class="sr-only">(current)</span></a>
+					      		</li>
+					      		<li class="nav-item">
+					        		<a class="nav-link" href="{{ url('/night-club/categoria') }}">Night Club<span class="sr-only">(current)</span></a>
+					      		</li>
+
+					      		<li class="nav-item">
+					        		<a class="nav-link" href="{{ url('/nado-con-delfines/categoria') }}">Nado con delfines y tiburon ballena<span class="sr-only">(current)</span></a>
+					      		</li>
+					      							      		<li class="nav-item">
 					        		<a class="nav-link" href="{{ url('contactanos') }}">Contacto <span class="sr-only">(current)</span></a>
 					      		</li>
 					    	</ul>
+					    	<ul class="nav navbar-nav pull-xs-right">
+							    <li class="nav-item">
+							        <a class="nav-link" href="{{ url('/carrito') }}" style="font-size: 1.6em;"><i class="fas fa-shopping-cart"></i></a>
+							    </li>
+							</ul>
 					  </div>
 			</nav>
 		</div>
@@ -250,24 +207,20 @@
 		</div>
 	</footer>
 
-
-
-	<script type="text/javascript" src="{{ url('/engine1/wowslider.js') }}"></script>
-	<script type="text/javascript" src="{{ url('/engine1/script.js') }}"></script>
-
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-	<script src="{{ url('/js/jquery.nice-select.min.js') }}"></script>
 	<script src="{{ url('/js/fastclick.js') }}"></script>
 	<script src="{{ url('/js/prism.js') }}"></script>
     <script src="{{ url('/js/parallax.min.js') }}"></script>
+
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+   
 
 
 		<!-- Smartsupp Live Chat script -->
@@ -320,15 +273,17 @@
           });
 
     $(document).ready(function() {
-      $('select:not(.ignore)').niceSelect();
-      FastClick.attach(document.body);
 
-      $('.js-example-basic-single').select2();
-
-      /*$('.select2-selection--single').hide();
-      $('.ver').show();*/
-
-      $('span[data-select2-id=5]').hide();
+      $( "#tipo_viaje" ).change(function() {
+		  if($(this).val()=='Viaje redondo')
+		  {
+		  	$("#departure_date").show();
+		  }
+		  else
+		  {
+		  	$("#departure_date").hide();
+		  }
+		});
 
 
     });
@@ -356,7 +311,7 @@
             };
             $.datepicker.setDefaults($.datepicker.regional['es']);
   $( function() {
-    $( "#datepicker" ).datepicker({ minDate: 2 });
+    $( ".datepicker" ).datepicker({ minDate: 2 });
   } );
 
     @if(isset($dias_activo_tour))

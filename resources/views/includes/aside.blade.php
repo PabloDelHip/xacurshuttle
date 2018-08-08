@@ -27,7 +27,7 @@
 
                     <div class="form-group">
                         <label for="FechaTour">Fecha:</label>
-                        <input name="fecha_tour"  type="text" class="form-control" id="datepicker" required>
+                        <input name="fecha_tour"  type="text" class="form-control datepicker" required>
                     </div>
                     @foreach($tourInfo as $tour)
                         <input type="hidden" name="id" value="{{ $tour->id }}">

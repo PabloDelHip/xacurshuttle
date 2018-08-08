@@ -16,20 +16,32 @@
             <div class="col-md-3 col-sm-12">
                 <img style="width: 100%;" src="{{ url('/img/tours')}}/{{ $tour->options->image }}" alt="tour" class="img-thumbnail">
             </div>
-            <div class="col-md-6 col-sm-12 info-tour-pasos">
-                <p class="h4">{{ $tour->name }}</p>
-                <p class=" m-0 mt-2 mb-1">Fecha del tour: <b>{{$tour->options->date }}</b> </p>
-                <p class=" m-0 mb-1">Numero de Adulto: <b>{{$tour->options->num_adult }}</b> </p>
+            @if($tour->options->type==1)
+                <div class="col-md-6 col-sm-12 info-tour-pasos">
+                    <p class="h4">{{ $tour->name }}</p>
+                    <p class=" m-0 mt-2 mb-1">Fecha del tour: <b>{{$tour->options->date }}</b> </p>
+                    <p class=" m-0 mb-1">Numero de Adulto: <b>{{$tour->options->num_adult }}</b> </p>
 
-                <p class="m-0 mb-1">Precio tour: <b>$ {{$tour->options->adult_price }}</b> <span>USD</span> </p>
-                <p>Total a pagar: <b>$ {{$tour->options->total_adult_price }}</b> <span>USD</span> </p>
+                    <p class="m-0 mb-1">Precio tour: <b>$ {{$tour->options->adult_price }}</b> <span>USD</span> </p>
+                    <p>Total a pagar: <b>$ {{$tour->options->total_adult_price }}</b> <span>USD</span> </p>
 
-                <p class=" m-0 mb-1">Numero de Niños: <b>{{$tour->options->num_child }}</b> </p>
-                <p class="m-0 mb-1">Precio tour: <b>$ {{$tour->options->child_price }}</b> <span>USD</span> </p>
-                <p>Total a pagar: <b>$ {{$tour->options->total_child_price }}</b> <span>USD</span> </p>
+                    <p class=" m-0 mb-1">Numero de Niños: <b>{{$tour->options->num_child }}</b> </p>
+                    <p class="m-0 mb-1">Precio tour: <b>$ {{$tour->options->child_price }}</b> <span>USD</span> </p>
+                    <p>Total a pagar: <b>$ {{$tour->options->total_child_price }}</b> <span>USD</span> </p>
 
 
-            </div>
+                </div>
+            @else
+                <div class="col-md-6 col-sm-12 info-tour-pasos">
+                    <p class="h4">Transportacion</p>
+                    <p class=" m-0 mb-1">Hotel: <b>{{$tour->options->name_hotel }}</b> </p>
+                    <p class=" m-0 mb-1">Zona: <b>{{$tour->name }}</b> </p>
+                    <p class=" m-0 mt-2 mb-1">Fecha: <b>{{$tour->options->arrival_date }}</b> </p>
+                    <p class=" m-0 mb-1">Num. Pax: <b>{{$tour->options->num_adult }}</b> </p>
+                    <p class=" m-0 mb-1">Tipo de transportación: <b>{{$tour->options->transfer_type }}</b> </p>
+
+                </div>
+            @endif
             <div class="col-md-3 col-sm-12 text-right pasos-total-pagar">
                 <p><b>$ {{$tour->options->total_sale }}</b> <span>USD</span>
                         <a class="ocultar ver-movil basura-movil" href="{{ url("{$tour->rowId}", "eliminar-tour") }}">

@@ -3,8 +3,8 @@
 
 @section('contenido')
 
-		<section class="mt-3">
-			<article>
+		<section>
+			<!-- <article>
 				<div id="wowslider-container1">
 					<div class="ws_images">
 						<ul>
@@ -23,7 +23,100 @@
 					<div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">html slideshow</a> by WOWSlider.com v8.8</div>
 					<div class="ws_shadow"></div>
 				</div>
-			</article>
+			</article> -->
+	<div style="position: absolute; z-index: 300; width: 100%;">
+		<div class="container" style="height: 100vh;">
+			<div class="col-md-4 mt-5">
+				<div class="card" style="background-color:rgba(255,255,255,0.5);">
+				  <div class="card-header text-center">
+				    <p class="h4"><b>ORGANIZA TU TRASLADO</b></p>
+				  </div>
+				  <div class="card-body">
+				   <form action="{{ route('ingresar-carrito') }}" method="POST">
+				   	 {!! csrf_field() !!}
+					  <div class="form-group">
+					    <select class="form-control" id="tipo_viaje" name="tipo_traslado">
+					      <option value="Viaje redondo">Viaje redondo</option>
+					      <option value="Sencillo - Aeropuerto al Hotel">Sencillo - Aeropuerto al Hotel</option>
+					      <option value="Sencillo - Hotel al Aeropuerto">Sencillo - Hotel al Aeropuerto</option>
+					    </select>
+					  </div>
+					  <div class="form-group">
+					    <input id="template-desc" class="form-control" name="hotel" style="width: 100%;" placeholder="Ingresar hotel" />
+
+<script type="text/javascript">
+	var options = {
+	data: [@foreach($hotels as $hotel)
+		{name: "{{$hotel->name}}", type: "{{$hotel->zone->name}}", icon: ""},
+		@endforeach],
+
+	getValue: "name",
+
+	list: {
+		match: {
+			enabled: true
+		}
+	},
+
+	template: {
+		type: "description",
+		fields: {
+			description: "type"
+		}
+	}
+};
+
+$("#template-desc").easyAutocomplete(options);
+</script>
+					  </div>
+
+					  <div class="form-group">
+					    <input type="number" class="form-control" name="num_adultos" placeholder="Num. Adultos">
+					  </div>
+
+					  <div class="form-group">
+                        <label for="FechaTour"><b>Fecha:</b></label>
+                        <input name="fecha_transporte_llegada" id="arrival_date"  type="text" class="form-control datepicker" required>
+                    </div>
+
+                    <div class="form-group" id="departure_date">
+                        <label for="FechaTour"><b>Fecha de salida:</b></label>
+                        <input name="fecha_transporte_salida"  type="text" class="form-control datepicker">
+                    </div>
+						
+						<input type="submit" class="btn btn-primary btn-lg btn-block" name="transportacion" value="Continuar">
+					</form>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+			 <div id="slides">
+    <div class="slides-container">
+      <img src="img/chichen.jpg" alt="Cinelli">
+      <img src="img/tulum.jpg" width="1024" height="682" alt="Surly">
+      <img src="img/delfines.jpg" width="1024" height="683" alt="Cinelli">
+    </div>
+
+    <nav class="slides-navigation">
+      <a href="#" class="next">Next</a>
+      <a href="#" class="prev">Previous</a>
+    </nav>
+
+  </div>
+
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.animate-enhanced.min.js"></script>
+  <script src="js/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    $('#slides').superslides({
+    	play: '6000',
+      animation: 'fade'
+    });
+  </script>
 
 
 		<!-- FINAL SLIDER -->

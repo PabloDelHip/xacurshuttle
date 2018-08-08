@@ -5,6 +5,8 @@ use Illuminate\Http\Request;
 use App\Tour;
 use App\Categorie;
 use App\Imagetour;
+use App\Zone;
+use App\Hotel;
 use Cart;
 use Barryvdh\DomPDF\Facade as PDF;
 use Session;
@@ -15,8 +17,13 @@ class Sitio extends Controller
     {
         // $valores = session('sesion');
         // dd($valores);
+        $hotels = Hotel::all();
+        // foreach ($zonas as $zona) {
+        //     echo $zona->zone->name."</br>";
+        // }
+        //dd($hotels);
         $categories = Categorie::all()->where('active', '=',true)->where('see_home', '=',true);
-        return view('home',compact('categories'));
+        return view('home',compact('categories','hotels'));
     }
 
     public function categoria($url)
