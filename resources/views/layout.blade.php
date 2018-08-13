@@ -87,7 +87,13 @@
 					      		</li>
 
 					      		<li class="nav-item">
-					        		<a class="nav-link" href="{{ url('/nado-con-delfines/categoria') }}">Nado con delfines y tiburon ballena<span class="sr-only">(current)</span></a>
+					        		<a class="nav-link" href="{{ url('/nado-con-delfines/categoria') }}">Delfines y tiburon ballena<span class="sr-only">(current)</span></a>
+					      		</li>
+					      		<li class="nav-item">
+					        		<a class="nav-link" href="{{ url('/yates/categoria') }}">Yates<span class="sr-only">(current)</span></a>
+					      		</li>
+					      		<li class="nav-item">
+					        		<a class="nav-link" href="{{ url('/familia/categoria') }}">Familia<span class="sr-only">(current)</span></a>
 					      		</li>
 					      							      		<li class="nav-item">
 					        		<a class="nav-link" href="{{ url('contactanos') }}">Contacto <span class="sr-only">(current)</span></a>
