@@ -25,6 +25,48 @@
 {{-- background-image: url('{{ url('/img/textura.png') }}');" --}}
 <body  style=" background-image: url('{{ url('/img/textura.png') }}');">
 
+	<header class="col-12">
+		<div class="container datos-contacto-header pt-1 pb-1">
+			<div class="row justify-content-end">
+				<div class="datos-header">
+					<i class="fab fa-whatsapp"></i>
+					<span>
+						<a href="https://api.whatsapp.com/send?phone=5219983183166&text=Buen dia, estoy interesado en unos tours" target="_blank"> +52 1 998 318 3166</a>
+					</span>
+				</div>
+				<div class="datos-header">
+					<i class="fas fa-phone"></i>
+					<span>
+						<a href="tel:9983850941"> +52 1 998 385 0941</a>
+					</span>
+				</div>
+				<div class="datos-header">
+					<span>
+						<a href="mailto:reservas@gocancuntours.com.mx"><i class="fas fa-envelope"></i> reservas@gocancuntours.com.mx</a>
+					</span>
+				</div>
+
+				<div class="datos-header carrito">
+					<span>
+                    <a href="{{ url('/carrito') }}"><i class="fas fa-shopping-cart"></i> {{Cart::content()->count()}}</a>
+					</span>
+				</div>
+				<div>
+					<img src="{{ url('/img/bandera-mexico.png') }}" alt="bandera de mexico">
+				</div>
+
+				<div class=" datos-header box justify-content-start">
+
+			      <select>
+			        <option value="MXN">MXN</option>
+			        <option value="USD">USD</option>
+			      </select>
+
+			    </div>
+			</div>
+		</div>
+	</header>
+
 	<!-- FINAL HEADER -->
 
 	<div class="contenedor-menu">
