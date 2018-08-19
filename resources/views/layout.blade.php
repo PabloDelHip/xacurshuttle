@@ -28,21 +28,21 @@
 	<header class="col-12">
 		<div class="container datos-contacto-header pt-1 pb-1">
 			<div class="row justify-content-end">
-				<div class="datos-header">
+				<!-- <div class="datos-header">
 					<i class="fab fa-whatsapp"></i>
 					<span>
 						<a href="https://api.whatsapp.com/send?phone=5219983183166&text=Buen dia, estoy interesado en unos tours" target="_blank"> +52 1 998 318 3166</a>
 					</span>
-				</div>
+				</div> -->
 				<div class="datos-header">
 					<i class="fas fa-phone"></i>
 					<span>
-						<a href="tel:9983850941"> +52 1 998 385 0941</a>
+						<a href="tel:9983850941"> +52 1 998 147 5180</a>
 					</span>
 				</div>
 				<div class="datos-header">
 					<span>
-						<a href="mailto:reservas@gocancuntours.com.mx"><i class="fas fa-envelope"></i> reservas@gocancuntours.com.mx</a>
+						<a href="mailto:reservas@gocancuntours.com.mx"><i class="fas fa-envelope"></i> saler@xacurshuttle.com</a>
 					</span>
 				</div>
 
