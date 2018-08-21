@@ -42,7 +42,7 @@
 				</div>
 				<div class="datos-header">
 					<span>
-						<a href="mailto:reservas@gocancuntours.com.mx"><i class="fas fa-envelope"></i> saler@xacurshuttle.com</a>
+						<a href="mailto:sales@xacurshuttle.com"><i class="fas fa-envelope"></i> sales@xacurshuttle.com</a>
 					</span>
 				</div>
 
