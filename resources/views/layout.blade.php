@@ -42,7 +42,7 @@
 				</div>
 				<div class="datos-header">
 					<span>
-						<a href="mailto:sales@xacurshuttle.com"><i class="fas fa-envelope"></i> sales@xacurshuttle.com</a>
+						<a href="mailto:tours@cancun.com"><i class="fas fa-envelope"></i> tours@cancun.com</a>
 					</span>
 				</div>
 
@@ -51,7 +51,7 @@
                     <a href="{{ url('/carrito') }}"><i class="fas fa-shopping-cart"></i> {{Cart::content()->count()}}</a>
 					</span>
 				</div>
-				<div>
+				{{-- <div>
 					<img src="{{ url('/img/bandera-mexico.png') }}" alt="bandera de mexico">
 				</div>
 
@@ -62,7 +62,7 @@
 			        <option value="USD">USD</option>
 			      </select>
 
-			    </div>
+			    </div> --}}
 			</div>
 		</div>
 	</header>
